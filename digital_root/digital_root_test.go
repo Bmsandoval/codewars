@@ -37,8 +37,11 @@ func TestDigitalRoot(t *testing.T) {
 	}
 }
 
+var result int
 func benchmarkDigitalRoot(i int, b *testing.B) {
+	var r int
 	for n := 0; n < b.N; n++ {
-		DigitalRoot(i)
+		r = DigitalRoot(i)
 	}
+	result = r
 }

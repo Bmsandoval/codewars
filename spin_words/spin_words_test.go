@@ -1,7 +1,7 @@
 package main
 
 import (
-	"codewars/shared"
+	"codewars/pkg"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )
@@ -40,7 +40,7 @@ func TestDigitalRoot(t *testing.T) {
 var result string
 func benchmarkDigitalRoot(i int, b *testing.B) {
 	var r string
-	randString := shared.RandomString(i)
+	randString := pkg.RandomString(i)
 	b.ResetTimer()
 	for n := 0; n < b.N; n++ {
 		r = SpinWords(randString)

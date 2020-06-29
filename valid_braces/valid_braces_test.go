@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestDigitalRoot(t *testing.T) {
+func TestValidBraces(t *testing.T) {
 	unitTestData := []struct {
 		Description string
 		Input string
@@ -47,7 +47,7 @@ func TestDigitalRoot(t *testing.T) {
 }
 
 var result bool
-func benchmarkDigitalRoot(i int, b *testing.B) {
+func benchmarkValidBraces(i int, b *testing.B) {
 	var r bool
 	for n := 0; n < b.N; n++ {
 		r = ValidBraces("[{([](){})}{}()[]]")

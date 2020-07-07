@@ -47,7 +47,7 @@ func TestValidBraces(t *testing.T) {
 }
 
 var result bool
-func benchmarkValidBraces(i int, b *testing.B) {
+func BenchmarkValidBraces(b *testing.B) {
 	var r bool
 	for n := 0; n < b.N; n++ {
 		r = ValidBraces("[{([](){})}{}()[]]")

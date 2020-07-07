@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-func TestDigitalRoot(t *testing.T) {
+func TestSpinWords(t *testing.T) {
 	unitTestData := []struct {
 		Description string
 		Input string
@@ -38,7 +38,7 @@ func TestDigitalRoot(t *testing.T) {
 }
 
 var result string
-func benchmarkDigitalRoot(i int, b *testing.B) {
+func benchmarkSpinWords(i int, b *testing.B) {
 	var r string
 	randString := pkg.RandomString(i)
 	b.ResetTimer()
@@ -47,3 +47,10 @@ func benchmarkDigitalRoot(i int, b *testing.B) {
 	}
 	result = r
 }
+
+func BenchmarkSpinWords1(b *testing.B)  { benchmarkSpinWords(1, b) }
+func BenchmarkSpinWords2(b *testing.B)  { benchmarkSpinWords(2, b) }
+func BenchmarkSpinWords3(b *testing.B)  { benchmarkSpinWords(3, b) }
+func BenchmarkSpinWords10(b *testing.B)  { benchmarkSpinWords(10, b) }
+func BenchmarkSpinWords20(b *testing.B)  { benchmarkSpinWords(20, b) }
+func BenchmarkSpinWords40(b *testing.B)  { benchmarkSpinWords(40, b) }

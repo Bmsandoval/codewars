@@ -27,7 +27,7 @@ func TestSimpleAssembler(t *testing.T) {
 }
 
 var result map[string]int
-func benchmarkSimpleAssembler(i int, b *testing.B) {
+func BenchmarkSimpleAssembler(b *testing.B) {
 	var r map[string]int
 	for n := 0; n < b.N; n++ {
 		r = SimpleAssembler([]string{"mov a 5", "inc a", "dec a", "dec a", "jnz a -1", "inc a"})

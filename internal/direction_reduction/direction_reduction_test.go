@@ -37,7 +37,7 @@ func TestDirReduc(t *testing.T) {
 }
 
 var result []string
-func benchmarkDirReduc(i int, b *testing.B) {
+func BenchmarkDirReduc(b *testing.B) {
 	var r []string
 	for n := 0; n < b.N; n++ {
 		r = DirReduc([]string{"NORTH", "EAST", "WEST", "SOUTH"})

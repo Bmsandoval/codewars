@@ -37,3 +37,10 @@ func benchmarkDuplicateEncode(i int, b *testing.B) {
 	}
 	result = r
 }
+
+func BenchmarkDuplicateEncode1(b *testing.B)  { benchmarkDuplicateEncode(1, b) }
+func BenchmarkDuplicateEncode2(b *testing.B)  { benchmarkDuplicateEncode(2, b) }
+func BenchmarkDuplicateEncode3(b *testing.B)  { benchmarkDuplicateEncode(3, b) }
+func BenchmarkDuplicateEncode10(b *testing.B)  { benchmarkDuplicateEncode(10, b) }
+func BenchmarkDuplicateEncode20(b *testing.B)  { benchmarkDuplicateEncode(20, b) }
+func BenchmarkDuplicateEncode40(b *testing.B)  { benchmarkDuplicateEncode(40, b) }

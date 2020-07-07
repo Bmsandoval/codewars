@@ -45,3 +45,10 @@ func benchmarkDigitalRoot(i int, b *testing.B) {
 	}
 	result = r
 }
+
+func BenchmarkDigitalRoot1(b *testing.B)  { benchmarkDigitalRoot(1, b) }
+func BenchmarkDigitalRoot2(b *testing.B)  { benchmarkDigitalRoot(2, b) }
+func BenchmarkDigitalRoot3(b *testing.B)  { benchmarkDigitalRoot(3, b) }
+func BenchmarkDigitalRoot10(b *testing.B)  { benchmarkDigitalRoot(10, b) }
+func BenchmarkDigitalRoot20(b *testing.B)  { benchmarkDigitalRoot(20, b) }
+func BenchmarkDigitalRoot40(b *testing.B)  { benchmarkDigitalRoot(40, b) }

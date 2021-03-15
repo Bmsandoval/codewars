@@ -1,7 +1,7 @@
 package main
 
 import (
-	"codewars/pkg"
+	"codewars/golang/pkg"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )

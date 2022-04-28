@@ -48,11 +48,11 @@ func CountNSum(numbers []int) []int {
 	close(resultCh)
 	resp := []int{0, 0}
 	for v := range resultCh {
-		idx := 0
 		if v < 0 {
-			idx = 1
+			resp[1] = v
+		} else if v > 0 {
+			resp[0] = v
 		}
-		resp[idx] = v
 	}
 	return resp
 }

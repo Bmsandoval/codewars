@@ -54,7 +54,7 @@ func TestCountNSum(t *testing.T) {
 
 var result []int
 
-// benchmarkCountNSum can be run via `$ go test -bench . ./...`
+// benchmarkCountNSum can be run via `$ go test -bench=. ./... -benchmem`
 func benchmarkCountNSum(i int, b *testing.B) {
 	var r []int
 	randArr := pkg.RandomIntArray(i)

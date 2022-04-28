@@ -1,6 +1,7 @@
 package main
 
 import (
+	"codewars/golang/pkg"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )
@@ -50,3 +51,25 @@ func TestCountNSum(t *testing.T) {
 		})
 	}
 }
+
+var result []int
+
+// benchmarkCountNSum can be run via `$ go test -bench . ./...`
+func benchmarkCountNSum(i int, b *testing.B) {
+	var r []int
+	randArr := pkg.RandomIntArray(i)
+	b.ResetTimer()
+	for n := 0; n < b.N; n++ {
+		r = CountNSum(randArr)
+	}
+	result = r
+}
+
+func BenchmarkCountNSum1(b *testing.B)    { benchmarkCountNSum(1, b) }
+func BenchmarkCountNSum2(b *testing.B)    { benchmarkCountNSum(2, b) }
+func BenchmarkCountNSum3(b *testing.B)    { benchmarkCountNSum(3, b) }
+func BenchmarkCountNSum10(b *testing.B)   { benchmarkCountNSum(10, b) }
+func BenchmarkCountNSum20(b *testing.B)   { benchmarkCountNSum(20, b) }
+func BenchmarkCountNSum40(b *testing.B)   { benchmarkCountNSum(40, b) }
+func BenchmarkCountNSum100(b *testing.B)  { benchmarkCountNSum(100, b) }
+func BenchmarkCountNSum1000(b *testing.B) { benchmarkCountNSum(1000, b) }

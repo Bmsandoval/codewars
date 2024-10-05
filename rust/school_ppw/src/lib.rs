@@ -1,7 +1,7 @@
-pub fn are_you_playing_banjo(name: &str) -> String {
-    if name.to_lowercase().starts_with('r') {
-        return (name.to_owned() + " plays banjo").to_string()
+pub fn paperwork(n: i16, m: i16) -> u32 {
+    if n < 1 || m < 1 {
+        0u32
+    } else {
+        (n * m) as u32
     }
-
-    (name.to_owned() + " does not play banjo").to_string()
 }

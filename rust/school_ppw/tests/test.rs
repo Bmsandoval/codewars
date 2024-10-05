@@ -1,19 +1,19 @@
 #[cfg(test)]
 mod tests {
-    use multiples_of_x::count_by;
+    use school_ppw::paperwork;
 
     #[test]
     fn test_count_by() {
         let test_data = vec![
-            ("test 1", vec![1,2,3,4,5,6,7,8,9,10], (1, 10)),
-            ("test 2", vec![2,4,6,8,10], (2, 5)),
-            ("test 3", vec![3,6,9,12,15,18,21], (3, 7)),
-            ("test 4", vec![50,100,150,200,250], (50, 5)),
-            ("test 5", vec![100,200,300,400,500,600], (100, 6))
+            ("test 1", (5,5), 25),
+            ("test 2", (5,-5), 0),
+            ("test 3", (-5,-5), 0),
+            ("test 4", (-5,5), 0),
+            ("test 5", (5,0), 0)
         ];
 
-        for (desc, expect, input) in test_data {
-            let got = count_by(input.0, input.1);
+        for (desc, input, expect) in test_data {
+            let got = paperwork(input.0, input.1);
             assert_eq!(got, expect, "Failed on: {}", desc);
         }
     }

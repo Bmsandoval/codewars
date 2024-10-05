@@ -3,7 +3,7 @@ mod tests {
     use multiples_of_x::count_by;
 
     #[test]
-    fn test_banjo() {
+    fn test_count_by() {
         let test_data = vec![
             ("test 1", vec![1,2,3,4,5,6,7,8,9,10], (1, 10)),
             ("test 2", vec![2,4,6,8,10], (2, 5)),

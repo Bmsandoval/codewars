@@ -3,7 +3,7 @@ mod tests {
     use school_ppw::paperwork;
 
     #[test]
-    fn test_count_by() {
+    fn test_school_ppw() {
         let test_data = vec![
             ("test 1", (5,5), 25),
             ("test 2", (5,-5), 0),
